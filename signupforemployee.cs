@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace finalooadproject
 {
-    public partial class signupformanager : Form
+    public partial class signupforemployee : Form
     {
-        public signupformanager()
+        public signupforemployee()
         {
             InitializeComponent();
         }

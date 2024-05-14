@@ -31,7 +31,10 @@
             lbl_forgotpasswordheading = new Label();
             lbl_newpassword = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
+            txt_newpassword = new TextBox();
+            txt_confirmpassword = new TextBox();
+            btn_DONE = new Button();
+            BACK = new Button();
             SuspendLayout();
             // 
             // lbl_forgotpasswordheading
@@ -64,19 +67,53 @@
             label3.TabIndex = 2;
             label3.Text = "Confirm Password";
             // 
-            // textBox1
+            // txt_newpassword
             // 
-            textBox1.Location = new Point(389, 148);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(261, 31);
-            textBox1.TabIndex = 3;
+            txt_newpassword.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_newpassword.Location = new Point(378, 137);
+            txt_newpassword.Name = "txt_newpassword";
+            txt_newpassword.Size = new Size(261, 45);
+            txt_newpassword.TabIndex = 3;
+            // 
+            // txt_confirmpassword
+            // 
+            txt_confirmpassword.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_confirmpassword.Location = new Point(378, 229);
+            txt_confirmpassword.Name = "txt_confirmpassword";
+            txt_confirmpassword.Size = new Size(261, 45);
+            txt_confirmpassword.TabIndex = 4;
+            // 
+            // btn_DONE
+            // 
+            btn_DONE.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_DONE.Location = new Point(364, 351);
+            btn_DONE.Name = "btn_DONE";
+            btn_DONE.Size = new Size(112, 52);
+            btn_DONE.TabIndex = 5;
+            btn_DONE.Text = "DONE";
+            btn_DONE.UseVisualStyleBackColor = true;
+            // 
+            // BACK
+            // 
+            BACK.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BACK.Location = new Point(174, 351);
+            BACK.Name = "BACK";
+            BACK.Size = new Size(112, 49);
+            BACK.TabIndex = 6;
+            BACK.Text = "BACK";
+            BACK.UseVisualStyleBackColor = true;
+            BACK.Visible = false;
+            BACK.Click += BACK_Click;
             // 
             // forgetpassword
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox1);
+            Controls.Add(BACK);
+            Controls.Add(btn_DONE);
+            Controls.Add(txt_confirmpassword);
+            Controls.Add(txt_newpassword);
             Controls.Add(label3);
             Controls.Add(lbl_newpassword);
             Controls.Add(lbl_forgotpasswordheading);
@@ -91,6 +128,9 @@
         private Label lbl_forgotpasswordheading;
         private Label lbl_newpassword;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox txt_newpassword;
+        private TextBox txt_confirmpassword;
+        private Button btn_DONE;
+        private Button BACK;
     }
 }

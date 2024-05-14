@@ -1,6 +1,6 @@
 ﻿namespace finalooadproject
 {
-    partial class signupformanager
+    partial class signupforemployee
     {
         /// <summary>
         /// Required designer variable.
@@ -28,42 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lbl_signupmanagerheading = new Label();
-            lbl_username = new Label();
+            label1 = new Label();
+            label2 = new Label();
             lbl_email = new Label();
             lbl_password = new Label();
+            btn_register = new Button();
+            btn_back = new Button();
             txt_username = new TextBox();
             txt_email = new TextBox();
             txt_password = new TextBox();
-            btn_back = new Button();
-            btn_register = new Button();
             SuspendLayout();
             // 
-            // lbl_signupmanagerheading
+            // label1
             // 
-            lbl_signupmanagerheading.AutoSize = true;
-            lbl_signupmanagerheading.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_signupmanagerheading.Location = new Point(142, 9);
-            lbl_signupmanagerheading.Name = "lbl_signupmanagerheading";
-            lbl_signupmanagerheading.Size = new Size(536, 65);
-            lbl_signupmanagerheading.TabIndex = 0;
-            lbl_signupmanagerheading.Text = "SIGNUP FOR MANAGER";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(144, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(535, 65);
+            label1.TabIndex = 0;
+            label1.Text = "SIGNUP FOR EMPLOYEE";
             // 
-            // lbl_username
+            // label2
             // 
-            lbl_username.AutoSize = true;
-            lbl_username.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_username.Location = new Point(122, 116);
-            lbl_username.Name = "lbl_username";
-            lbl_username.Size = new Size(142, 38);
-            lbl_username.TabIndex = 1;
-            lbl_username.Text = "Username";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(137, 112);
+            label2.Name = "label2";
+            label2.Size = new Size(142, 38);
+            label2.TabIndex = 1;
+            label2.Text = "Username";
             // 
             // lbl_email
             // 
             lbl_email.AutoSize = true;
             lbl_email.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_email.Location = new Point(122, 199);
+            lbl_email.Location = new Point(138, 165);
             lbl_email.Name = "lbl_email";
             lbl_email.Size = new Size(83, 38);
             lbl_email.TabIndex = 2;
@@ -73,87 +73,87 @@
             // 
             lbl_password.AutoSize = true;
             lbl_password.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_password.Location = new Point(122, 269);
+            lbl_password.Location = new Point(137, 224);
             lbl_password.Name = "lbl_password";
             lbl_password.Size = new Size(132, 38);
             lbl_password.TabIndex = 3;
             lbl_password.Text = "Password";
             // 
-            // txt_username
+            // btn_register
             // 
-            txt_username.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_username.Location = new Point(291, 116);
-            txt_username.Name = "txt_username";
-            txt_username.Size = new Size(299, 45);
-            txt_username.TabIndex = 4;
-            // 
-            // txt_email
-            // 
-            txt_email.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_email.Location = new Point(293, 199);
-            txt_email.Name = "txt_email";
-            txt_email.Size = new Size(297, 45);
-            txt_email.TabIndex = 5;
-            // 
-            // txt_password
-            // 
-            txt_password.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_password.Location = new Point(291, 269);
-            txt_password.Name = "txt_password";
-            txt_password.Size = new Size(299, 45);
-            txt_password.TabIndex = 6;
+            btn_register.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_register.Location = new Point(439, 356);
+            btn_register.Name = "btn_register";
+            btn_register.Size = new Size(150, 50);
+            btn_register.TabIndex = 4;
+            btn_register.Text = "REGISTER";
+            btn_register.UseVisualStyleBackColor = true;
             // 
             // btn_back
             // 
             btn_back.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_back.Location = new Point(161, 359);
+            btn_back.Location = new Point(179, 356);
             btn_back.Name = "btn_back";
-            btn_back.Size = new Size(125, 50);
-            btn_back.TabIndex = 7;
+            btn_back.Size = new Size(137, 50);
+            btn_back.TabIndex = 5;
             btn_back.Text = "BACK";
             btn_back.UseVisualStyleBackColor = true;
             btn_back.Click += btn_back_Click;
             // 
-            // btn_register
+            // txt_username
             // 
-            btn_register.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_register.Location = new Point(439, 359);
-            btn_register.Name = "btn_register";
-            btn_register.Size = new Size(151, 50);
-            btn_register.TabIndex = 8;
-            btn_register.Text = "REGISTER";
-            btn_register.UseVisualStyleBackColor = true;
+            txt_username.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_username.Location = new Point(308, 107);
+            txt_username.Name = "txt_username";
+            txt_username.Size = new Size(310, 45);
+            txt_username.TabIndex = 6;
             // 
-            // signupformanager
+            // txt_email
+            // 
+            txt_email.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_email.Location = new Point(308, 160);
+            txt_email.Name = "txt_email";
+            txt_email.Size = new Size(310, 45);
+            txt_email.TabIndex = 7;
+            // 
+            // txt_password
+            // 
+            txt_password.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_password.Location = new Point(307, 217);
+            txt_password.Name = "txt_password";
+            txt_password.Size = new Size(311, 45);
+            txt_password.TabIndex = 8;
+            // 
+            // signupforemployee
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(btn_register);
-            Controls.Add(btn_back);
             Controls.Add(txt_password);
             Controls.Add(txt_email);
             Controls.Add(txt_username);
+            Controls.Add(btn_back);
+            Controls.Add(btn_register);
             Controls.Add(lbl_password);
             Controls.Add(lbl_email);
-            Controls.Add(lbl_username);
-            Controls.Add(lbl_signupmanagerheading);
-            Name = "signupformanager";
-            Text = "signupformanager";
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Name = "signupforemployee";
+            Text = "signupforemployee";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label lbl_signupmanagerheading;
-        private Label lbl_username;
+        private Label label1;
+        private Label label2;
         private Label lbl_email;
         private Label lbl_password;
+        private Button btn_register;
+        private Button btn_back;
         private TextBox txt_username;
         private TextBox txt_email;
         private TextBox txt_password;
-        private Button btn_back;
-        private Button btn_register;
     }
 }

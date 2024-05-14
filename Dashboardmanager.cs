@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace finalooadproject
 {
-    public partial class signupformanager : Form
+    public partial class Dashboardmanager : Form
     {
-        public signupformanager()
+        public Dashboardmanager()
         {
             InitializeComponent();
-        }
-
-        private void btn_back_Click(object sender, EventArgs e)
-        {
-            loginform lgf = new loginform();
-            lgf.Show();
         }
     }
 }
