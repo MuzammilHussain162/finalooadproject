@@ -27,5 +27,11 @@ namespace finalooadproject
         {
 
         }
+
+        private void lbl_forgotpassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            forgetpassword frgpass = new forgetpassword();
+            frgpass.Show();
+        }
     }
 }

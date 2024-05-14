@@ -115,6 +115,7 @@
             lbl_forgotpassword.TabIndex = 7;
             lbl_forgotpassword.TabStop = true;
             lbl_forgotpassword.Text = "Forgot Password?";
+            lbl_forgotpassword.LinkClicked += lbl_forgotpassword_LinkClicked;
             // 
             // loginmanager
             // 

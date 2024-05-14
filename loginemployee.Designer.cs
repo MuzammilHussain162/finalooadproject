@@ -73,12 +73,13 @@
             // 
             lbl_forgetpassword.AutoSize = true;
             lbl_forgetpassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_forgetpassword.Location = new Point(292, 282);
+            lbl_forgetpassword.Location = new Point(289, 291);
             lbl_forgetpassword.Name = "lbl_forgetpassword";
             lbl_forgetpassword.Size = new Size(199, 32);
             lbl_forgetpassword.TabIndex = 3;
             lbl_forgetpassword.TabStop = true;
             lbl_forgetpassword.Text = "Forgot Password?";
+            lbl_forgetpassword.LinkClicked += lbl_forgetpassword_LinkClicked;
             // 
             // textBox1
             // 
@@ -96,7 +97,6 @@
             textBox2.PasswordChar = '*';
             textBox2.Size = new Size(300, 45);
             textBox2.TabIndex = 5;
-            textBox2.Visible = false;
             // 
             // btn_loginemployee
             // 

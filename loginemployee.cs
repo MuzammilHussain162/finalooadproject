@@ -21,7 +21,15 @@ namespace finalooadproject
         {
             loginform lgf = new loginform();
             lgf.Show();
-           
+            //loginemployee lgemp = new loginemployee();
+            //lgemp.Hide();
+
+        }
+
+        private void lbl_forgetpassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            forgetpassword frgpass = new forgetpassword();
+            frgpass.Show();
         }
     }
 }

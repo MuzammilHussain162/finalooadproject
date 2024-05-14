@@ -69,6 +69,7 @@
             linkLbl_loginasmanager.TabIndex = 2;
             linkLbl_loginasmanager.TabStop = true;
             linkLbl_loginasmanager.Text = "Login as a Manager";
+            linkLbl_loginasmanager.LinkClicked += linkLbl_loginasmanager_LinkClicked;
             // 
             // linkLbl_signupforemployee
             // 
@@ -115,6 +116,7 @@
             Controls.Add(lbl_projectheading);
             Name = "loginform";
             Text = "loginform";
+            Load += loginform_Load;
             ResumeLayout(false);
             PerformLayout();
         }
