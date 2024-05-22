@@ -173,6 +173,72 @@ namespace Data_Access_Layer
                 }
             }
         }
+        public bool CreateTask(int taskId, string taskDescription, string taskDetails, decimal dollarReward)
+        {
+            using (SqlConnection conn = new SqlConnection(Connection.ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("CreateTask", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@TaskId", taskId);
+                    cmd.Parameters.AddWithValue("@TaskDescription", taskDescription);
+                    cmd.Parameters.AddWithValue("@TaskDetails", taskDetails);
+                    cmd.Parameters.AddWithValue("@DollarReward", dollarReward);
+
+                    conn.Open();
+                    int result = cmd.ExecuteNonQuery();
+                    return result > 0;
+                }
+            }
+        }
+        public DataTable GetTasks()
+        {
+            DataTable tasksTable = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(Connection.ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("GetTasks", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(tasksTable);
+                }
+            }
+
+            return tasksTable;
+        }
+        public bool DeleteTask(int taskId)
+        {
+            using (SqlConnection conn = new SqlConnection(Connection.ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("DeleteTask", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@TaskId", taskId);
+
+                    conn.Open();
+                    int result = cmd.ExecuteNonQuery();
+                    return result > 0;
+                }
+            }
+        }
+            public bool UpdateTaskDescription(int taskId, string newTaskDescription)
+        {
+            using (SqlConnection conn = new SqlConnection(Connection.ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("UpdateTaskDescription", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@TaskId", taskId);
+                    cmd.Parameters.AddWithValue("@NewTaskDescription", newTaskDescription);
+
+                    conn.Open();
+                    int result = cmd.ExecuteNonQuery();
+                    return result > 0;
+                }
+            }
+        }
         public bool UpdatePassword(string tableName, string username, string newPassword)
         {
             using (SqlConnection conn = new SqlConnection(Connection.ConnectionString))

@@ -12,6 +12,11 @@ namespace finalooadproject
 {
     public partial class managerdashboard : Form
     {
+        public string username;
+        public void usname(string us)
+        {
+            username = us;
+        }
         public managerdashboard()
         {
             InitializeComponent();
