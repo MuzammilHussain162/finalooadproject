@@ -81,9 +81,10 @@ namespace finalooadproject
                     
                     if (userType == "MANAGER") {
 
-                        Dashboardmanager dash_man = new Dashboardmanager();
-                        
+                        managerdashboard dash_man = new managerdashboard(username);
                         dash_man.Show();
+                        
+                        
                         MessageBox.Show("Login successful!");
                     }
                     else{

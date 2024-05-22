@@ -127,5 +127,10 @@ namespace finalooadproject
             managerdashboard mngrdash = new managerdashboard();
             mngrdash.Show();
         }
+
+        private void lbl_dollarrewards_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

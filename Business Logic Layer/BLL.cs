@@ -89,7 +89,15 @@ namespace Business_Logic_Layer
            
             return dataAccess.DeleteWorker(workerID);
         }
+        public bool UpdateManagerPassword(string managername,string Currentpassword, string newPassword)
+        {
+            return dataAccess.UpdateManagerPassword(managername, Currentpassword, newPassword);
+        }
 
+        public bool VerifyCurrentPassword(string managername, string currentPassword)
+        {
+            return dataAccess.VerifyCurrentPassword(managername, currentPassword);
+        }
         public bool UpdatePassword(string tableName, string username, string newPassword, string confirmPassword)
         {
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(newPassword) || string.IsNullOrEmpty(confirmPassword))

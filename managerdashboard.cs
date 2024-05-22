@@ -12,14 +12,13 @@ namespace finalooadproject
 {
     public partial class managerdashboard : Form
     {
-        public string username;
-        public void usname(string us)
-        {
-            username = us;
-        }
-        public managerdashboard()
+        private string username;
+
+        public managerdashboard(string username)
         {
             InitializeComponent();
+            this.username = username;
+            txt_username.Text = this.username;
         }
 
         private void managerdashboard_Load(object sender, EventArgs e)
@@ -37,6 +36,17 @@ namespace finalooadproject
         {
             loginform lgf = new loginform();
             lgf.Show();
+        }
+
+        private void txt_username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_changepassword_Click(object sender, EventArgs e)
+        {
+            changepassword chngpass = new changepassword(username);
+            chngpass.Show();
         }
     }
 }

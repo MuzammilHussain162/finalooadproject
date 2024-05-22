@@ -17,6 +17,7 @@ namespace finalooadproject
         public manage_workers()
         {
             InitializeComponent();
+            businessLogic = new BLL();
             LoadWorkers();
         }
 
@@ -43,6 +44,26 @@ namespace finalooadproject
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_deleteworker_Click(object sender, EventArgs e)
+        {
+            int workerID;
+            if (int.TryParse(txt_employeeid.Text, out workerID))
+            {
+                string result = businessLogic.DeleteWorker(workerID);
+                MessageBox.Show(result);
+                LoadWorkers();
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid Worker ID.");
+            }
+        }
+
+        private void txt_employeeid_TextChanged(object sender, EventArgs e)
         {
 
         }

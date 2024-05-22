@@ -7,10 +7,10 @@ namespace Data_Access_Layer
 {
     public class DAL
     {
-        public static string ServerIP = "34.102.74.198";
+        public static string ServerIP = @"MUZAMMILHUSSAIN\SQLEXPRESS";
         public static string DatabaseName = "ooad_project";
-        public static string DatabaseUserID = "muzammil";
-        public static string DatabasePassword = "uWU_T,.vev)za5n";
+        public static string DatabaseUserID = "dmk";
+        public static string DatabasePassword = "dmk123";
         private static Hashtable SqlparamCache = Hashtable.Synchronized(new Hashtable());
         private SqlConnection Connection = new SqlConnection();
         private SqlCommand DbCommand = new SqlCommand();
@@ -79,7 +79,7 @@ namespace Data_Access_Layer
             {
                 if (Connection.State == ConnectionState.Open) return true;
                 Connection = new SqlConnection();
-                Connection.ConnectionString = $"data source={ServerIP.Trim()}; initial catalog={DatabaseName.Trim()}; user id={DatabaseUserID.Trim()}; password={DatabasePassword.Trim()};";
+                Connection.ConnectionString = $"Data Source={ServerIP}; Initial Catalog={DatabaseName}; User ID={DatabaseUserID}; Password={DatabasePassword};";
                 Connection.Open();
                 if (Connection.State == ConnectionState.Open)
                 {
@@ -95,6 +95,23 @@ namespace Data_Access_Layer
             {
                 throw new Exception("Database:OpenConnection:" + ee.Message);
             }
+        }
+        public DataTable GetWorkers()
+        {
+            DataTable workersTable = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(Connection.ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("GetWorkers", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(workersTable);
+                }
+            }
+
+            return workersTable;
         }
 
         public void CloseConnection()
@@ -117,6 +134,39 @@ namespace Data_Access_Layer
         public int ExecuteQuery()
         {
             return DbCommand.ExecuteNonQuery();
+        }
+        public bool VerifyCurrentPassword(string managername, string currentPassword)
+        {
+            using (SqlConnection conn = new SqlConnection(Connection.ConnectionString))
+            {
+                string query = "SELECT COUNT(1) FROM MANAGER WHERE manager_name = @managername AND manager_password = @CurrentPassword";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@manager_name", managername);
+                    cmd.Parameters.AddWithValue("@manager_password", currentPassword);
+
+                    conn.Open();
+                    int count = (int)cmd.ExecuteScalar();
+                    return count == 1;
+                }
+            }
+        }
+            public bool UpdateManagerPassword(string managername, string currentPassword, string newPassword)
+        {
+            using (SqlConnection conn = new SqlConnection(Connection.ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("UpdateManagerPassword", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Managername", managername);
+                    cmd.Parameters.AddWithValue("@CurrentPassword", currentPassword);
+                    cmd.Parameters.AddWithValue("@NewPassword", newPassword);
+
+                    conn.Open();
+                    int success = (int)cmd.ExecuteScalar();
+                    return success == 1;
+                }
+            }
         }
 
         public object ExecuteValue()
@@ -208,6 +258,7 @@ namespace Data_Access_Layer
                 }
             }
         }
+
         public DataTable GetTasks()
         {
             DataTable tasksTable = new DataTable();

@@ -50,8 +50,7 @@ namespace finalooadproject
                 if (success)
                 {
                     MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Dashboard_Employee dash_emp = new Dashboard_Employee();
-                    dash_emp.Show();
+                   
                 }
 
                 else

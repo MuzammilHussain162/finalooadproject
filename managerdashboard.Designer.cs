@@ -79,6 +79,7 @@
             btn_changepassword.TabIndex = 3;
             btn_changepassword.Text = "Change Password";
             btn_changepassword.UseVisualStyleBackColor = true;
+            btn_changepassword.Click += btn_changepassword_Click;
             // 
             // btn_search
             // 
@@ -118,6 +119,7 @@
             txt_username.Name = "txt_username";
             txt_username.Size = new Size(260, 31);
             txt_username.TabIndex = 7;
+            txt_username.TextChanged += txt_username_TextChanged;
             // 
             // lbl_username
             // 

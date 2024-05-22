@@ -122,6 +122,7 @@
             btn_deleteworker.TabIndex = 3;
             btn_deleteworker.Text = "Delete";
             btn_deleteworker.UseVisualStyleBackColor = true;
+            btn_deleteworker.Click += btn_deleteworker_Click;
             // 
             // txt_employeeid
             // 
@@ -129,6 +130,7 @@
             txt_employeeid.Name = "txt_employeeid";
             txt_employeeid.Size = new Size(245, 39);
             txt_employeeid.TabIndex = 2;
+            txt_employeeid.TextChanged += txt_employeeid_TextChanged;
             // 
             // lbl_EnterEmployeeid
             // 

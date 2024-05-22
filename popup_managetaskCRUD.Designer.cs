@@ -156,6 +156,7 @@
             lbl_dollarrewards.Size = new Size(231, 38);
             lbl_dollarrewards.TabIndex = 2;
             lbl_dollarrewards.Text = "Dollar Rewards: $";
+            lbl_dollarrewards.Click += lbl_dollarrewards_Click;
             // 
             // lbl_extradetails
             // 
