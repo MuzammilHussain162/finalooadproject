@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "finalooadproject", "finalooadproject.csproj", "{3A35BA78-1406-4BC2-BD3E-A5ABB33EAFDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "finalooadproject", "finalooadproject.csproj", "{3A35BA78-1406-4BC2-BD3E-A5ABB33EAFDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business Logic Layer", "Business Logic Layer\Business Logic Layer.csproj", "{2A163DB1-49B3-4BF4-8F7F-FA7E15A56483}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Access Layer", "Data Access Layer\Data Access Layer.csproj", "{DF1FD385-37A8-4FFE-92DC-3152908EC580}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{3A35BA78-1406-4BC2-BD3E-A5ABB33EAFDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A35BA78-1406-4BC2-BD3E-A5ABB33EAFDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A35BA78-1406-4BC2-BD3E-A5ABB33EAFDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A163DB1-49B3-4BF4-8F7F-FA7E15A56483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A163DB1-49B3-4BF4-8F7F-FA7E15A56483}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A163DB1-49B3-4BF4-8F7F-FA7E15A56483}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A163DB1-49B3-4BF4-8F7F-FA7E15A56483}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF1FD385-37A8-4FFE-92DC-3152908EC580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF1FD385-37A8-4FFE-92DC-3152908EC580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF1FD385-37A8-4FFE-92DC-3152908EC580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF1FD385-37A8-4FFE-92DC-3152908EC580}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
