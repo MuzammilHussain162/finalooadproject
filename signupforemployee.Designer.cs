@@ -45,15 +45,16 @@
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(144, 9);
             label1.Name = "label1";
-            label1.Size = new Size(535, 65);
+            label1.Size = new Size(501, 65);
             label1.TabIndex = 0;
-            label1.Text = "SIGNUP FOR EMPLOYEE";
+            label1.Text = "SIGNUP FOR WORKER";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(137, 112);
+            label2.Location = new Point(137, 169);
             label2.Name = "label2";
             label2.Size = new Size(142, 38);
             label2.TabIndex = 1;
@@ -63,11 +64,12 @@
             // 
             lbl_email.AutoSize = true;
             lbl_email.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_email.Location = new Point(138, 165);
+            lbl_email.Location = new Point(154, 111);
             lbl_email.Name = "lbl_email";
             lbl_email.Size = new Size(83, 38);
             lbl_email.TabIndex = 2;
             lbl_email.Text = "Email";
+            lbl_email.Visible = false;
             // 
             // lbl_password
             // 
@@ -88,6 +90,7 @@
             btn_register.TabIndex = 4;
             btn_register.Text = "REGISTER";
             btn_register.UseVisualStyleBackColor = true;
+            btn_register.Click += btn_register_Click;
             // 
             // btn_back
             // 
@@ -103,7 +106,7 @@
             // txt_username
             // 
             txt_username.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_username.Location = new Point(308, 107);
+            txt_username.Location = new Point(308, 162);
             txt_username.Name = "txt_username";
             txt_username.Size = new Size(310, 45);
             txt_username.TabIndex = 6;
@@ -111,10 +114,12 @@
             // txt_email
             // 
             txt_email.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_email.Location = new Point(308, 160);
+            txt_email.Location = new Point(307, 111);
             txt_email.Name = "txt_email";
             txt_email.Size = new Size(310, 45);
             txt_email.TabIndex = 7;
+            txt_email.Visible = false;
+            txt_email.TextChanged += txt_email_TextChanged;
             // 
             // txt_password
             // 
@@ -140,6 +145,7 @@
             Controls.Add(label1);
             Name = "signupforemployee";
             Text = "signupforemployee";
+            Load += signupforemployee_Load;
             ResumeLayout(false);
             PerformLayout();
         }

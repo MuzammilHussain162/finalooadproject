@@ -43,7 +43,7 @@
             // 
             lbl_signupmanagerheading.AutoSize = true;
             lbl_signupmanagerheading.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_signupmanagerheading.Location = new Point(142, 9);
+            lbl_signupmanagerheading.Location = new Point(142, 65);
             lbl_signupmanagerheading.Name = "lbl_signupmanagerheading";
             lbl_signupmanagerheading.Size = new Size(536, 65);
             lbl_signupmanagerheading.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             lbl_username.AutoSize = true;
             lbl_username.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_username.Location = new Point(122, 116);
+            lbl_username.Location = new Point(112, 199);
             lbl_username.Name = "lbl_username";
             lbl_username.Size = new Size(142, 38);
             lbl_username.TabIndex = 1;
@@ -63,11 +63,12 @@
             // 
             lbl_email.AutoSize = true;
             lbl_email.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_email.Location = new Point(122, 199);
+            lbl_email.Location = new Point(142, 140);
             lbl_email.Name = "lbl_email";
             lbl_email.Size = new Size(83, 38);
             lbl_email.TabIndex = 2;
             lbl_email.Text = "Email";
+            lbl_email.Visible = false;
             // 
             // lbl_password
             // 
@@ -82,18 +83,21 @@
             // txt_username
             // 
             txt_username.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_username.Location = new Point(291, 116);
+            txt_username.Location = new Point(291, 199);
             txt_username.Name = "txt_username";
             txt_username.Size = new Size(299, 45);
             txt_username.TabIndex = 4;
+            txt_username.TextChanged += txt_username_TextChanged;
             // 
             // txt_email
             // 
             txt_email.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_email.Location = new Point(293, 199);
+            txt_email.Location = new Point(293, 133);
             txt_email.Name = "txt_email";
             txt_email.Size = new Size(297, 45);
             txt_email.TabIndex = 5;
+            txt_email.Visible = false;
+            txt_email.TextChanged += txt_email_TextChanged;
             // 
             // txt_password
             // 
@@ -102,6 +106,7 @@
             txt_password.Name = "txt_password";
             txt_password.Size = new Size(299, 45);
             txt_password.TabIndex = 6;
+            txt_password.TextChanged += txt_password_TextChanged;
             // 
             // btn_back
             // 
@@ -123,6 +128,7 @@
             btn_register.TabIndex = 8;
             btn_register.Text = "REGISTER";
             btn_register.UseVisualStyleBackColor = true;
+            btn_register.Click += btn_register_Click;
             // 
             // signupformanager
             // 
@@ -140,6 +146,7 @@
             Controls.Add(lbl_signupmanagerheading);
             Name = "signupformanager";
             Text = "signupformanager";
+            Load += signupformanager_Load;
             ResumeLayout(false);
             PerformLayout();
         }

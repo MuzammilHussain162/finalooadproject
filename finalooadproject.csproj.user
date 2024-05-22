@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Dashboard Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Dashboardmanager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -17,6 +20,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="loginmanager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="managerdashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="popup_managetaskCRUD.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="signupforemployee.cs">
