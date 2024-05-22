@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace finalooadproject
 {
-    public partial class Dashboard_Employee : Form
+    public partial class View_Reward : Form
     {
-        public Dashboard_Employee()
+        public View_Reward()
         {
             InitializeComponent();
         }
 
-        private void btn_exit_Click(object sender, EventArgs e)
+        private void btn_back_Click(object sender, EventArgs e)
         {
-            loginform lgf = new loginform();
-            lgf.Show();
+            Dashboard_Employee dash_emp = new Dashboard_Employee();
+            dash_emp.Show();
         }
     }
 }

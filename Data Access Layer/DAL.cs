@@ -151,7 +151,55 @@ namespace Data_Access_Layer
                 }
             }
         }
-            public bool UpdateManagerPassword(string managername, string currentPassword, string newPassword)
+        public DataTable GetAllTasks()
+        {
+            using (SqlConnection conn = new SqlConnection(Connection.ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("GetAllTasks", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+                }
+            }
+        }
+        public bool MarkTaskComplete(string taskId)
+        {
+            using (SqlConnection conn = new SqlConnection(Connection.ConnectionString))
+            {
+                conn.Open();
+                using (SqlTransaction transaction = conn.BeginTransaction())
+                {
+                    try
+                    {
+                        using (SqlCommand cmd = new SqlCommand("MoveTaskToTemp", conn, transaction))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@TaskId", taskId);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        using (SqlCommand cmd = new SqlCommand("DeleteTask", conn, transaction))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@TaskId", taskId);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        transaction.Commit();
+                        return true;
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                        return false;
+                    }
+                }
+            }
+        }
+        public bool UpdateManagerPassword(string managername, string currentPassword, string newPassword)
         {
             using (SqlConnection conn = new SqlConnection(Connection.ConnectionString))
             {

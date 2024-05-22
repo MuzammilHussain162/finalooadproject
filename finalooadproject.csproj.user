@@ -31,6 +31,9 @@
     <Compile Update="manage_workers.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="marktaskcomplete.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="popup_managetaskCRUD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -38,6 +41,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="signupformanager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View Reward.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

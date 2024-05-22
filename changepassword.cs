@@ -7,16 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Business_Logic_Layer;
 namespace finalooadproject
 {
     public partial class changepassword : Form
     {
+        private readonly BLL businessLogic;
         private string username;
         public changepassword(string usname)
         {
             InitializeComponent();
             this.username = usname;
+            businessLogic = new BLL();
         }
 
         private void changepassword_Load(object sender, EventArgs e)
@@ -26,6 +28,16 @@ namespace finalooadproject
 
         private void btn_update_Click(object sender, EventArgs e)
         {
+           bool sucess= businessLogic.VerifyCurrentPassword(username,txt_currentpassword.Text);
+            if (sucess)
+            {
+
+                businessLogic.UpdateManagerPassword(username, txt_currentpassword.Text, txt_newpassword.Text);
+            }
+            else {
+                MessageBox.Show("Current Password not match with real password. Try Again XD");
+            
+            }
 
         }
 

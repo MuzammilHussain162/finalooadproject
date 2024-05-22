@@ -84,6 +84,15 @@ namespace Business_Logic_Layer
 
             return dataAccess.RegisterWorker(username, password);
         }
+        public DataTable GetAllTasks()
+        {
+            return dataAccess.GetAllTasks();
+        }
+
+        public bool MarkTaskComplete(string taskId)
+        {
+            return dataAccess.MarkTaskComplete(taskId);
+        }
         public string DeleteWorker(int workerID)
         {
            
