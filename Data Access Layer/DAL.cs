@@ -191,6 +191,23 @@ namespace Data_Access_Layer
                 }
             }
         }
+        public string DeleteWorker(int workerID)
+        {
+            using (SqlConnection conn = new SqlConnection(Connection.ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("DeleteWorker", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@WorkerID", workerID);
+
+                    conn.Open();
+                    var result = cmd.ExecuteScalar().ToString();
+                    conn.Close();
+
+                    return result;
+                }
+            }
+        }
         public DataTable GetTasks()
         {
             DataTable tasksTable = new DataTable();
@@ -208,6 +225,7 @@ namespace Data_Access_Layer
 
             return tasksTable;
         }
+        
         public bool DeleteTask(int taskId)
         {
             using (SqlConnection conn = new SqlConnection(Connection.ConnectionString))

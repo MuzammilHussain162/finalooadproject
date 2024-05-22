@@ -38,6 +38,10 @@ namespace Business_Logic_Layer
 
             return dataAccess.DeleteTask(taskId);
         }
+        public DataTable GetWorkers()
+        {
+            return dataAccess.GetWorkers();
+        }
         public DataTable GetTasks()
         {
             return dataAccess.GetTasks();
@@ -80,7 +84,12 @@ namespace Business_Logic_Layer
 
             return dataAccess.RegisterWorker(username, password);
         }
-      
+        public string DeleteWorker(int workerID)
+        {
+           
+            return dataAccess.DeleteWorker(workerID);
+        }
+
         public bool UpdatePassword(string tableName, string username, string newPassword, string confirmPassword)
         {
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(newPassword) || string.IsNullOrEmpty(confirmPassword))

@@ -121,5 +121,11 @@ namespace finalooadproject
         {
             LoadTasks();
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            managerdashboard mngrdash = new managerdashboard();
+            mngrdash.Show();
+        }
     }
 }

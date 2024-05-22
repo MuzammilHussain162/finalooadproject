@@ -25,6 +25,9 @@
     <Compile Update="managerdashboard.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="manage_workers.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="popup_managetaskCRUD.cs">
       <SubType>Form</SubType>
     </Compile>

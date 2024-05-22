@@ -32,5 +32,11 @@ namespace finalooadproject
             popup_managetaskCRUD manCRUD = new popup_managetaskCRUD();
             manCRUD.Show();
         }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            loginform lgf = new loginform();
+            lgf.Show();
+        }
     }
 }

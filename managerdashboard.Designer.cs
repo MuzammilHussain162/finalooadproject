@@ -65,7 +65,7 @@
             btn_manageworker.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_manageworker.Location = new Point(340, 138);
             btn_manageworker.Name = "btn_manageworker";
-            btn_manageworker.Size = new Size(269, 45);
+            btn_manageworker.Size = new Size(269, 48);
             btn_manageworker.TabIndex = 2;
             btn_manageworker.Text = "Manage Workers";
             btn_manageworker.UseVisualStyleBackColor = true;
@@ -110,6 +110,7 @@
             btn_exit.TabIndex = 6;
             btn_exit.Text = "Exit";
             btn_exit.UseVisualStyleBackColor = true;
+            btn_exit.Click += btn_exit_Click;
             // 
             // txt_username
             // 

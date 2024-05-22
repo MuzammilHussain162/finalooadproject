@@ -337,6 +337,7 @@
             btn_back.TabIndex = 2;
             btn_back.Text = "BACK";
             btn_back.UseVisualStyleBackColor = true;
+            btn_back.Click += btn_back_Click;
             // 
             // popup_managetaskCRUD
             // 
