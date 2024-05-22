@@ -25,7 +25,7 @@ namespace finalooadproject
         private void linklbl_loginasemployee_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             loginemployee lgemployee = new loginemployee();
-            lgemployee.Show();
+           lgemployee.Show();
         }
 
         private void loginform_Load(object sender, EventArgs e)

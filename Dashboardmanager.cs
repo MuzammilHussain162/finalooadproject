@@ -14,7 +14,7 @@ namespace finalooadproject
     {
         public Dashboardmanager()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
     }
 }
