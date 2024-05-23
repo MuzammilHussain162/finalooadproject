@@ -18,6 +18,30 @@ namespace Data_Access_Layer
         private DataSet SqlDataSet = new DataSet();
         private DataTable SqlTable = new DataTable();
 
+        /////////////////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// ///////////////////////////////////////
+        private SqlConnection connection;
+
+        public DAL()
+        {
+            connection = new SqlConnection();
+        }
+
+        public void Connect(string connectionString)
+        {
+            if (connection.State != ConnectionState.Closed)
+            {
+                connection.Close();
+            }
+
+            connection.ConnectionString = connectionString;
+            connection.Open();
+        }
+        ///////////////////////////////////////////////////////////////////////////////////
+        /// /////////////////////////////////////
+        /// 
+        /// </summary>
         public void UnLoadSpParameters()
         {
             DbCommand.Parameters.Clear();
@@ -72,30 +96,30 @@ namespace Data_Access_Layer
             return DbCommand.Parameters[P];
         }
 
-        public bool OpenConnection()
-        {
-            DbCommand = new SqlCommand();
-            try
-            {
-                if (Connection.State == ConnectionState.Open) return true;
-                Connection = new SqlConnection();
-                Connection.ConnectionString = $"Data Source={ServerIP}; Initial Catalog={DatabaseName}; User ID={DatabaseUserID}; Password={DatabasePassword};";
-                Connection.Open();
-                if (Connection.State == ConnectionState.Open)
-                {
-                    DbCommand.Connection = Connection;
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            catch (Exception ee)
-            {
-                throw new Exception("Database:OpenConnection:" + ee.Message);
-            }
-        }
+        //public bool OpenConnection()
+        //{
+        //    DbCommand = new SqlCommand();
+        //    try
+        //    {
+        //        if (Connection.State == ConnectionState.Open) return true;
+        //        Connection = new SqlConnection();
+        //        Connection.ConnectionString = $"Data Source={ServerIP}; Initial Catalog={DatabaseName}; User ID={DatabaseUserID}; Password={DatabasePassword};";
+        //        Connection.Open();
+        //        if (Connection.State == ConnectionState.Open)
+        //        {
+        //            DbCommand.Connection = Connection;
+        //            return true;
+        //        }
+        //        else
+        //        {
+        //            return false;
+        //        }
+        //    }
+        //    catch (Exception ee)
+        //    {
+        //        throw new Exception("Database:OpenConnection:" + ee.Message);
+        //    }
+        //}
         public DataTable GetWorkers()
         {
             DataTable workersTable = new DataTable();
