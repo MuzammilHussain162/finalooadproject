@@ -1,3 +1,5 @@
+using expensetracker1._1;
+
 namespace finalooadproject
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace finalooadproject
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new loginform());
+            Application.Run(new dbconnector());
         }
     }
 }

@@ -69,6 +69,7 @@
             btn_manageworker.TabIndex = 2;
             btn_manageworker.Text = "Manage Workers";
             btn_manageworker.UseVisualStyleBackColor = true;
+            btn_manageworker.Click += btn_manageworker_Click;
             // 
             // btn_changepassword
             // 

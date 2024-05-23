@@ -48,5 +48,11 @@ namespace finalooadproject
             changepassword chngpass = new changepassword(username);
             chngpass.Show();
         }
+
+        private void btn_manageworker_Click(object sender, EventArgs e)
+        {
+            manage_workers mngwork = new manage_workers(txt_username.Text);
+            mngwork.Show();
+        }
     }
 }

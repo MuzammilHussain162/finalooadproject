@@ -14,8 +14,10 @@ namespace finalooadproject
     public partial class manage_workers : Form
     {
         private readonly BLL businessLogic;
-        public manage_workers()
+        private string usname;
+        public manage_workers(string us)
         {
+            this.usname = us;
             InitializeComponent();
             businessLogic = new BLL();
             LoadWorkers();
@@ -23,7 +25,7 @@ namespace finalooadproject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            managerdashboard mngdash = new managerdashboard();
+            managerdashboard mngdash = new managerdashboard(usname);
             mngdash.Show();
         }
         private void LoadWorkers()
@@ -64,6 +66,11 @@ namespace finalooadproject
         }
 
         private void txt_employeeid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void manage_workers_Load(object sender, EventArgs e)
         {
 
         }

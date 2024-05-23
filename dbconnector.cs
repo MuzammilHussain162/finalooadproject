@@ -57,14 +57,18 @@ namespace expensetracker1._1
             string serverName = servernametxtb.Text;
             string username = usernametxtb.Text;
             string password = passwordtxtb.Text;
+            string serverIP2 = serveriptxtb.Text;
+            string servername2 = servernametxtb.Text;
+            string serverusername2 = usernametxtb.Text;
+            string serverpassword2 = passwordtxtb.Text;
 
             try
             {
                 // Attempt to connect to the remote database using BLL method
-                businessLogic.RemoteConnection(serverIP, serverName, username, password);
+                businessLogic.RemoteConnection(serverIP2, servername2, serverusername2, serverpassword2);
 
                 // Save connection settings
-                businessLogic.SaveConnectionSettings(serverIP, serverName, username, password);
+                businessLogic.SaveConnectionSettings(serverIP2, servername2, serverpassword2, serverpassword2);
 
                 // Display connection result message
                 MessageBox.Show("Remote database connection established successfully.", "Connection Status", MessageBoxButtons.OK, MessageBoxIcon.Information);

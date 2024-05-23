@@ -136,20 +136,20 @@ namespace Business_Logic_Layer
             }
         }
 
-        public void SaveConnectionSettings(string server, string database, string user, string pass)
-        {
-            // Save connection settings internally in the BLL
-            serverName = server;
-            databaseName = database;
-            userName = user;
-            password = pass;
+        //public void SaveConnectionSettings(string server, string database, string user, string pass)
+        //{
+        //    // Save connection settings internally in the BLL
+        //    serverName = server;
+        //    databaseName = database;
+        //    userName = user;
+        //    password = pass;
 
-            // Save connection settings to file
-            SaveConnectionSettingsToFile();
+        //    // Save connection settings to file
+        //    SaveConnectionSettingsToFile();
 
-            // Reconnect to the database with new settings
-            ConnectToDatabase();
-        }
+        //    // Reconnect to the database with new settings
+        //    ConnectToDatabase();
+        //}
         public void RemoteConnection(string serverip, string servername, string username, string password)
         {
             string connectionString = $"Data Source={serverip};Initial Catalog={servername};User ID={username};Password={password}";

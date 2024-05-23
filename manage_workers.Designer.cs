@@ -172,6 +172,7 @@
             Controls.Add(label1);
             Name = "manage_workers";
             Text = "manage_workers";
+            Load += manage_workers_Load;
             tabControl1.ResumeLayout(false);
             tab_viewworkers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView_viewallworkers).EndInit();
